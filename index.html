@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Ali Hamroun | Full Stack Developer Portfolio</title>
+    <meta name="description" content="22-year-old full-stack developer passionate about creating innovative solutions. Specializing in React, Next.js, Node.js, and modern web technologies.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #030014;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.6); }
+        }
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+        .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+        .animate-orbit { animation: orbit 15s linear infinite; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2); }
+        .Welcome-box { display: inline-flex; align-items: center; border-radius: 9999px; }
+        .Welcome-text { background: linear-gradient(to right, #b49bff, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .video-bg {
+            background: linear-gradient(135deg, #1a0533 0%, #030014 50%, #0a1628 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center"><button
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition-colors"
+                    type="button">Mohamed Ali Hamroun</button>
+                <div class="hidden md:flex space-x-8"><a href="#about"
+                        class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors">About</a><a
+                        href="#pfe"
+                        class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors">PFE</a><a
+                        href="#skills"
+                        class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors">Skills</a><a
+                        href="#projects"
+                        class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors">Projects</a><a
+                        href="#contact"
+                        class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <main class="h-full w-full">
+            <div class="flex flex-col gap-0">
+                <div class="relative flex flex-col h-full w-full overflow-hidden video-bg" id="about-me">
+                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[0]">
+                        <source src="assets/blackhole.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 z-[1] opacity-60" style="background: linear-gradient(135deg, #1a0533 0%, #0a0a2e 25%, #030014 50%, #0a1628 75%, #1a0533 100%);"></div>
+                    <div class="absolute inset-0 z-[2] bg-gradient-to-b from-transparent via-[#030014]/50 to-[#030014]">
+                    </div>
+                    <div class="absolute inset-0 z-[3] pointer-events-none">
+                        <div
+                            class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[150px] animate-float">
+                        </div>
+                        <div
+                            class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[120px] animate-float-slow">
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 mt-20 md:mt-40 w-full z-[20] min-h-screen">
+                        <div class="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start">
+                            <div class="Welcome-box py-[8px] px-[16px] border border-[#7042f88b] opacity-[0.9] mx-auto lg:mx-0 backdrop-blur-sm bg-[#030014]/50"
+                                style="opacity: 1; transform: none;"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                    class="text-[#b49bff] mr-[10px] h-5 w-5 animate-pulse">
+                                    <path fill-rule="evenodd"
+                                        d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <h1 class="Welcome-text text-[13px] tracking-wider">Fullstack Developer Portfolio</h1>
+                            </div>
+                            <div class="flex flex-col gap-6 mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto mx-auto lg:mx-0"
+                                style="opacity: 1; transform: none;"><span class="leading-tight">Providing<span
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#f5e6c8] via-[#d4a574] to-[#8b6914]">
+                                        <!-- -->the best<!-- --> </span>project experience</span></div>
+                            <p class="text-lg text-gray-400 my-5 max-w-[600px] mx-auto lg:mx-0 leading-relaxed"
+                                style="opacity: 1; transform: none;">I'm a Full Stack Software Engineer with experience
+                                in Website, Mobile, and Software development. Check out my projects and skills.</p>
+                            <div class="flex gap-4 justify-center lg:justify-start"
+                                style="opacity: 1; transform: none;"><a href="#projects"
+                                    class="group relative py-3 px-8 text-center text-white cursor-pointer rounded-full overflow-hidden hover-lift"><span
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600"></span><span
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span><span
+                                        class="relative z-10 font-semibold tracking-wide">View Projects</span></a><a
+                                    href="#contact"
+                                    class="py-3 px-8 text-center text-white cursor-pointer rounded-full border border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300 backdrop-blur-sm font-semibold tracking-wide">Contact
+                                    Me</a></div>
+                        </div>
+                        <div class="w-full h-full flex justify-center items-center mt-10 lg:mt-0"
+                            style="opacity: 1; transform: none;">
+                            <div class="relative animate-float">
+                                <div
+                                    class="absolute -inset-8 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse">
+                                </div>
+                                <div
+                                    class="absolute -inset-4 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-xl">
+                                </div>
+                                <div class="absolute inset-0 animate-orbit" style="animation-duration:15s">
+                                    <div class="w-3 h-3 bg-purple-500 rounded-full blur-sm"></div>
+                                </div>
+                                <div class="absolute inset-0 animate-orbit"
+                                    style="animation-duration:20s;animation-delay:-5s">
+                                    <div class="w-2 h-2 bg-cyan-500 rounded-full blur-sm"></div>
+                                </div>
+                                <div class="relative animate-glow-pulse rounded-full"><img alt="Mohamed Ali Hamroun"
+                                        width="350" height="350" decoding="async" data-nimg="1"
+                                        class="relative rounded-full border-2 border-purple-500/50 shadow-2xl shadow-purple-500/30 object-cover"
+                                        style="color:transparent" src="assets/profile.jpg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="about" class="py-20 px-10 md:px-20">
+                    <div class="max-w-6xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10"
+                            style="opacity:1;transform:none">About Me</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="space-y-4" style="opacity:0;transform:translateX(-100px)">
+                                <p class="text-lg text-gray-300 leading-relaxed">I'm a passionate 22-year-old full-stack
+                                    developer with a unique background in compiler creation. Fluent in both code and
+                                    Arabic, I bring a multicultural perspective to software development.</p>
+                                <p class="text-lg text-gray-300 leading-relaxed">My journey in tech started at age 13,
+                                    and I've been building innovative solutions ever since. I have experience in
+                                    full-stack development, compiler creation, and backend frameworks. My innovative
+                                    mindset is focused on solving problems efficiently and crafting unique digital
+                                    solutions.</p>
+                                <p class="text-lg text-gray-300 leading-relaxed">What sets me apart is my dedication to
+                                    building innovative tools like backend frameworks and compilers, always striving to
+                                    make software development more efficient and user-friendly.</p>
+                            </div>
+                            <div class="space-y-6" style="opacity:1;transform:none">
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-white mb-4">Quick Stats</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div
+                                            class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                            <p class="text-3xl font-bold text-purple-400">2+</p>
+                                            <p class="text-gray-400">Years Experience</p>
+                                        </div>
+                                        <div
+                                            class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                            <p class="text-3xl font-bold text-cyan-400">10+</p>
+                                            <p class="text-gray-400">Projects</p>
+                                        </div>
+                                        <div
+                                            class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                            <p class="text-3xl font-bold text-purple-400">2015</p>
+                                            <p class="text-gray-400">GitHub Since</p>
+                                        </div>
+                                        <div
+                                            class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                            <p class="text-3xl font-bold text-cyan-400">13</p>
+                                            <p class="text-gray-400">Age Started</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-white mb-4">Fun Facts</h3>
+                                    <ul class="space-y-2 text-gray-300">
+                                        <li>🌍 Arabic language enthusiast and native speaker</li>
+                                        <li>💻 Started coding on GitHub at age 13</li>
+                                        <li>☕ Proud member of the "Java haters" club</li>
+                                        <li>🌉 Love bridging technology with Arabic culture</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="skills"
+                    class="flex flex-col items-center justify-center gap-8 min-h-screen relative overflow-hidden py-20 px-4">
+                    <div class="absolute inset-0 z-0">
+                        <div
+                            class="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px] animate-float-slow">
+                        </div>
+                        <div
+                            class="absolute bottom-40 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] animate-float">
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[150px]">
+                        </div>
+                    </div>
+                    <div class="relative z-10 w-full h-auto flex flex-col items-center justify-center mb-8">
+                        <div class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6"
+                            style="opacity:0;transform:translateY(-20px)"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                class="text-purple-400 h-5 w-5 animate-pulse">
+                                <path fill-rule="evenodd"
+                                    d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                                    clip-rule="evenodd"></path>
+                            </svg><span class="text-sm font-medium text-purple-300">Full Stack Developer</span></div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                            style="opacity:0;transform:translateY(20px)"><span class="text-white">My </span><span
+                                class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Tech
+                                Stack</span></h2>
+                        <p class="text-lg text-gray-400 text-center max-w-xl"
+                            style="opacity:0;transform:translateY(20px)">Building modern, scalable applications with
+                            cutting-edge technologies</p>
+                        <div class="mt-8 h-1 w-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
+                            style="transform:scaleX(0)"></div>
+                    </div>
+                    <div class="relative z-10 w-full max-w-6xl mx-auto mt-8 space-y-12">
+                        <div class="relative" style="opacity:0;transform:translateY(30px)">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+                                <h3
+                                    class="text-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                                    Frontend</h3>
+                                <div class="h-[1px] flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"></div>
+                            </div>
+                            <div class="flex flex-row justify-start flex-wrap gap-4 items-center">
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/html.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/css.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="65" height="65" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/js.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/tailwind.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/mui.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/react.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/redux.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/reactquery.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/ts.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative" style="opacity:0;transform:translateY(30px)">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                <h3
+                                    class="text-lg font-semibold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                                    Backend</h3>
+                                <div class="h-[1px] flex-1 bg-gradient-to-r from-purple-500 to-pink-500 opacity-20">
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-start flex-wrap gap-4 items-center">
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/node-js.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/express.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="40" height="40" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/mongodb.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="55" height="55" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/Firebase.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/postger.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/mysql.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/prisma.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/graphql.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative" style="opacity:0;transform:translateY(30px)">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="h-1 w-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
+                                <h3
+                                    class="text-lg font-semibold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+                                    Full Stack</h3>
+                                <div class="h-[1px] flex-1 bg-gradient-to-r from-green-500 to-emerald-500 opacity-20">
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-start flex-wrap gap-4 items-center">
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/ReactNative.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/tauri.svg"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="80" height="80" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/next.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative" style="opacity:0;transform:translateY(30px)">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="h-1 w-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full"></div>
+                                <h3
+                                    class="text-lg font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                                    Tools &amp; Other</h3>
+                                <div class="h-[1px] flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 opacity-20">
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-start flex-wrap gap-4 items-center">
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/docker.webp"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/figma.png"></div>
+                                </div>
+                                <div class="relative group" style="opacity:0;transform:scale(0.8)">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                                    </div>
+                                    <div class="relative p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10  hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/10"
+                                        style="opacity:0;transform:translateY(20px) scale(0.8)"><img alt="skill image"
+                                            loading="lazy" width="60" height="60" decoding="async" data-nimg="1"
+                                            class="transition-transform duration-300" style="color:transparent"
+                                            src="assets/go.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 z-[-1]">
+                        <div class="w-full h-full opacity-20 flex items-center justify-center">
+                            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                                <source src="assets/cards-video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030014] to-transparent z-10">
+                    </div>
+                </section>
+                <section
+                    class="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden py-20">
+                    <div class="absolute inset-0 z-0">
+                        <div
+                            class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[150px] animate-float">
+                        </div>
+                        <div
+                            class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/20 rounded-full blur-[120px] animate-float-slow">
+                        </div>
+                    </div>
+                    <div class="relative z-10 mb-16" style="opacity:1;transform:translateY(0)">
+                        <h2 class="text-4xl md:text-5xl font-bold text-center"><span
+                                class="text-white">Performance</span><span
+                                class="mx-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">&amp;</span><span
+                                class="text-white">Security</span></h2>
+                        <div class="h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full">
+                        </div>
+                    </div>
+                    <div class="relative z-20 flex flex-col items-center" style="opacity:1;transform:scale(1)">
+                        <div
+                            class="absolute w-40 h-40 rounded-full bg-gradient-to-r from-purple-500/30 to-cyan-500/30 blur-2xl animate-glow-pulse">
+                        </div>
+                        <div class="relative flex flex-col items-center group cursor-pointer">
+                            <div><img alt="Lock top" loading="lazy" width="50" height="50" decoding="async"
+                                    data-nimg="1" class="w-[50px] translate-y-5 transition-all duration-300"
+                                    style="color:transparent" src="assets/LockTop.svg"></div><img alt="Lock Main"
+                                loading="lazy" width="70" height="70" decoding="async" data-nimg="1"
+                                class="z-10 drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]" style="color:transparent"
+                                src="assets/LockMain.svg">
+                        </div>
+                        <div class="mt-6 px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20  border border-purple-500/40 backdrop-blur-sm"
+                            style="opacity:1;transform:translateY(0)"><span
+                                class="text-sm font-medium bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">🔐
+                                End-to-End Encryption</span></div>
+                    </div>
+                    <p class="relative z-10 mt-10 text-center text-lg text-gray-400 max-w-md px-4"
+                        style="opacity:1;transform:translateY(0)">Your data is protected with industry-leading
+                        security standards and encrypted communications.</p>
+                    <div class="relative z-10 mt-8 flex flex-wrap justify-center gap-4" style="opacity:1"><span
+                            class="px-4 py-2 text-sm text-gray-300 rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300">SSL/TLS</span><span
+                            class="px-4 py-2 text-sm text-gray-300 rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300">AES-256</span><span
+                            class="px-4 py-2 text-sm text-gray-300 rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300">Zero
+                            Trust</span></div>
+                    <div class="absolute inset-0 z-[-1] opacity-30">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="assets/encryption.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030014] to-transparent z-10">
+                    </div>
+                </section>
+                <div class="flex flex-col items-center justify-center py-20" id="projects">
+                    <h1
+                        class="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+                        My Projects</h1>
+                    <div class="h-full w-full flex flex-col gap-10 px-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="DBGO - Lightweight Database System" loading="lazy" width="1000"
+                                        height="1000" decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-dbgo.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/db"><svg class="w-5 h-5 text-white"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://dbgo.vercel.app/"><svg class="w-5 h-5 text-white" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        DBGO - Lightweight Database System</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">A simple yet powerful
+                                        database system written in Go featuring ACID-like transactions, data validation,
+                                        thread-safe operations, and cross-platform support.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Go</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Node.js</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">REST
+                                            API</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Database</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-500">+<!-- -->1</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/db">View Code</a><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://dbgo.vercel.app/">Live Demo</a></div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="Modern E-commerce Platform" loading="lazy" width="1000"
+                                        height="1000" decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-ecommerce.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/ecommerce"><svg
+                                                class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://ecommerce-ruddy-psi.vercel.app/"><svg
+                                                class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        Modern E-commerce Platform</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">Full-featured e-commerce
+                                        platform with Google OAuth, real-time cart management, admin dashboard,
+                                        analytics, and secure payment integration.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Next.js</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">TypeScript</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">MongoDB</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">NextUI</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-500">+<!-- -->1</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/ecommerce">View Code</a><a
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://ecommerce-ruddy-psi.vercel.app/">Live Demo</a></div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="Mega-Tel Web Application" loading="lazy" width="1000" height="1000"
+                                        decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-megatel.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/Web-Application-for-MegaTel"><svg
+                                                class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://mega-tel.surge.sh/"><svg class="w-5 h-5 text-white"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        Mega-Tel Web Application</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">A robust MERN stack
+                                        application designed for managing telecommunications services with real-time
+                                        data handling and secure authentication.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">MERN</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Real-time
+                                            Data</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Authentication</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">MongoDB</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-500">+<!-- -->1</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/Web-Application-for-MegaTel">View
+                                            Code</a><a target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://mega-tel.surge.sh/">Live Demo</a></div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="Note-Taking Application" loading="lazy" width="1000" height="1000"
+                                        decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-notes.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/dnd_notes_with_nextAuth_supabaseSQL"><svg
+                                                class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://dnd-notes-with-next-auth-supabase-sql.vercel.app/"><svg
+                                                class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        Note-Taking Application</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">A modern note-taking web app
+                                        with drag-and-drop functionality, NextAuth.js authentication, and Supabase SQL
+                                        backend.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Next.js</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Framer
+                                            Motion</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">NextAuth</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Supabase</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-500">+<!-- -->1</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/dnd_notes_with_nextAuth_supabaseSQL">View
+                                            Code</a><a target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://dnd-notes-with-next-auth-supabase-sql.vercel.app/">Live
+                                            Demo</a></div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="AI-Powered Online Compiler" loading="lazy" width="1000"
+                                        height="1000" decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-compiler.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/online_compiler_flask"><svg
+                                                class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://online-compiler-flask.onrender.com/"><svg
+                                                class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        AI-Powered Online Compiler</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">An online compiler with
+                                        integrated AI to help clients learn programming languages. Deployed using Flask
+                                        for robust backend support.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Flask</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">AI
+                                            Integration</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Compiler
+                                            Design</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Python</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/online_compiler_flask">View Code</a><a
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://online-compiler-flask.onrender.com/">Live Demo</a></div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-sm hover-lift group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="relative overflow-hidden h-52 w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent z-10">
+                                    </div><img alt="Hotel &amp; Coffee Table Reservation System" loading="lazy"
+                                        width="1000" height="1000" decoding="async" data-nimg="1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        style="color:transparent" src="assets/project-booking.svg">
+                                    <div
+                                        class="absolute top-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-purple-500/60 transition-colors"
+                                            href="https://github.com/mohamedx2/bookingMern"><svg
+                                                class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                                                </path>
+                                            </svg></a><a target="_blank" rel="noopener noreferrer"
+                                            class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center hover:bg-cyan-500/60 transition-colors"
+                                            href="https://booking-reactjs-nine.vercel.app/"><svg
+                                                class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="relative p-6 flex-1 flex flex-col gap-4">
+                                    <h1
+                                        class="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                                        Hotel &amp; Coffee Table Reservation System</h1>
+                                    <p class="text-gray-400 text-sm flex-1 leading-relaxed">A collaborative MERN stack
+                                        project enabling room and table reservations with a user-friendly interface and
+                                        secure database operations.</p>
+                                    <div class="flex flex-wrap gap-2"><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">MERN
+                                            Stack</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">MongoDB</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">Express</span><span
+                                            class="px-3 py-1 text-xs rounded-full bg-white/5 text-gray-300 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-colors cursor-default">React</span>
+                                    </div>
+                                    <div class="flex gap-3 pt-4 border-t border-white/5 mt-auto"><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all duration-300 text-center text-sm font-semibold border border-purple-500/20 hover:border-purple-500/40"
+                                            href="https://github.com/mohamedx2/bookingMern">View Code</a><a
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 text-center text-sm font-semibold"
+                                            href="https://booking-reactjs-nine.vercel.app/">Live Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="baraqex"
+                    class="py-20 px-10 md:px-20 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12" style="opacity:0;transform:translateX(-100px)">
+                            <h2
+                                class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-4">
+                                Baraqex Framework 🚀</h2>
+                            <p class="text-lg text-gray-400 max-w-3xl mx-auto">A powerful, modern JavaScript/TypeScript
+                                framework for building universal web applications with seamless WebAssembly integration,
+                                server-side rendering, and full-stack capabilities</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
+                            <div class="space-y-4" style="opacity:0;transform:translateX(-100px)">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">⚡</p>
+                                        <h3 class="text-white font-semibold mb-1">Universal JSX</h3>
+                                        <p class="text-sm text-gray-400">React-like components, zero dependencies</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">🚀</p>
+                                        <h3 class="text-white font-semibold mb-1">WebAssembly Ready</h3>
+                                        <p class="text-sm text-gray-400">Seamless Go WASM integration</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">🔄</p>
+                                        <h3 class="text-white font-semibold mb-1">SSR Built-in</h3>
+                                        <p class="text-sm text-gray-400">Server rendering with hydration</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">💎</p>
+                                        <h3 class="text-white font-semibold mb-1">TypeScript First</h3>
+                                        <p class="text-sm text-gray-400">Full type safety &amp; IntelliSense</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">🏗️</p>
+                                        <h3 class="text-white font-semibold mb-1">Full-Stack</h3>
+                                        <p class="text-sm text-gray-400">Complete backend with API routes</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+                                        <p class="text-2xl mb-2">⚙️</p>
+                                        <h3 class="text-white font-semibold mb-1">Zero Dependencies</h3>
+                                        <p class="text-sm text-gray-400">Lightweight core, optimal performance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30"
+                                style="opacity:0;transform:translateX(100px)">
+                                <div class="space-y-6">
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-400">Current Version</p>
+                                            <p class="text-2xl font-bold text-purple-400">v1.0.74</p>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-400">Weekly Downloads</p>
+                                            <p class="text-2xl font-bold text-cyan-400">1,124</p>
+                                        </div>
+                                    </div>
+                                    <div class="pt-6 border-t border-purple-500/30">
+                                        <p class="text-sm text-gray-400 mb-3">Installation</p><code
+                                            class="block p-3 bg-black/40 rounded border border-purple-500/20 text-cyan-400 text-sm overflow-x-auto">npm install baraqex</code>
+                                    </div>
+                                    <div class="flex gap-3 pt-6"><a target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2 px-4 rounded bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold text-center hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+                                            href="https://www.baraqex.tech/">📚 Documentation</a><a target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex-1 py-2 px-4 rounded border border-purple-500/50 text-white font-semibold text-center hover:bg-purple-500/10 transition-all duration-300"
+                                            href="https://www.npmjs.com/package/baraqex">📦 NPM Package</a><a
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="flex-1 py-2 px-4 rounded border border-purple-500/50 text-white font-semibold text-center hover:bg-purple-500/10 transition-all duration-300"
+                                            href="https://github.com/mohamedx2/baraqex">🔗 GitHub</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="certifications" class="py-20 px-10 md:px-20">
+                    <div class="max-w-6xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-10"
+                            style="opacity:0;transform:translateX(-100px)">Certifications</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6"><a
+                                href="https://learn.365datascience.com/certificates/CC-1F47BE6F06/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-6 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer"
+                                style="opacity:0;transform:translateX(-100px)">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-2">Git &amp; GitHub</h3>
+                                        <p class="text-gray-400 mb-2">365 Data Science</p>
+                                        <p class="text-sm text-purple-400">2024</p>
+                                    </div><span class="text-2xl">🎓</span>
+                                </div>
+                            </a><a href="https://learn.365datascience.com/certificates/CC-3D82ADAB87/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-6 rounded-lg bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer"
+                                style="opacity:0;transform:translateX(-100px)">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-2">Introduction to Python</h3>
+                                        <p class="text-gray-400 mb-2">365 Data Science</p>
+                                        <p class="text-sm text-purple-400">2024</p>
+                                    </div><span class="text-2xl">🎓</span>
+                                </div>
+                            </a></div>
+                    </div>
+                </section>
+                <section id="contact" class="relative min-h-screen py-24 px-6 overflow-hidden">
+                    <div class="absolute inset-0 z-0">
+                        <div class="absolute top-1/4 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-[150px]"></div>
+                        <div class="absolute bottom-1/4 right-0 w-80 h-80 bg-cyan-500/20 rounded-full blur-[120px]">
+                        </div>
+                    </div>
+                    <div class="relative z-10 max-w-4xl mx-auto">
+                        <div class="text-center mb-16" style="opacity:0;transform:translateY(30px)"><span
+                                class="inline-block px-4 py-2 mb-6 text-sm font-medium rounded-full  bg-gradient-to-r from-purple-500/20 to-cyan-500/20  border border-purple-500/30 text-purple-300">Let's
+                                Work Together</span>
+                            <h2 class="text-4xl md:text-6xl font-bold mb-6"><span class="text-white">Get In </span><span
+                                    class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+                            </h2>
+                            <p class="text-lg text-gray-400 max-w-xl mx-auto">I'm always excited to discuss new
+                                projects, creative ideas, or opportunities to be part of your vision.</p>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-6 mb-16">
+                            <div style="opacity:0;transform:translateY(30px)"><a
+                                    class="group block h-full p-6 rounded-2xl bg-white/5 backdrop-blur-sm  border border-white/10 hover:border-purple-500/50  hover:bg-white/10 transition-all duration-300"
+                                    href="mailto:hamroun1969@gmail.com">
+                                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 
+                                               flex items-center justify-center mb-4
+                                               group-hover:scale-110 transition-transform duration-300"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" class="w-7 h-7 text-white" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                                            </path>
+                                        </svg></div>
+                                    <h3
+                                        class="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                                        Email</h3>
+                                    <p class="text-sm text-gray-500 mb-3">Drop me a line anytime</p>
+                                    <p
+                                        class="text-gray-400 group-hover:text-white transition-colors flex items-center gap-2">
+                                        hamroun1969@gmail.com<svg stroke="currentColor" fill="currentColor"
+                                            stroke-width="0" viewBox="0 0 448 512"
+                                            class="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
+                                            </path>
+                                        </svg></p>
+                                </a></div>
+                            <div style="opacity:0;transform:translateY(30px)"><a target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="group block h-full p-6 rounded-2xl bg-white/5 backdrop-blur-sm  border border-white/10 hover:border-purple-500/50  hover:bg-white/10 transition-all duration-300"
+                                    href="https://github.com/mohamedx2">
+                                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-600 to-gray-800 
+                                               flex items-center justify-center mb-4
+                                               group-hover:scale-110 transition-transform duration-300"><svg
+                                            stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15"
+                                            class="w-7 h-7 text-white" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                    <h3
+                                        class="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                                        GitHub</h3>
+                                    <p class="text-sm text-gray-500 mb-3">Check out my projects</p>
+                                    <p
+                                        class="text-gray-400 group-hover:text-white transition-colors flex items-center gap-2">
+                                        @mohamedx2<svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 448 512"
+                                            class="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
+                                            </path>
+                                        </svg></p>
+                                </a></div>
+                            <div style="opacity:0;transform:translateY(30px)"><a target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="group block h-full p-6 rounded-2xl bg-white/5 backdrop-blur-sm  border border-white/10 hover:border-purple-500/50  hover:bg-white/10 transition-all duration-300"
+                                    href="https://www.linkedin.com/in/mohamed-ali-hamroun-486573314/">
+                                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 
+                                               flex items-center justify-center mb-4
+                                               group-hover:scale-110 transition-transform duration-300"><svg
+                                            stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15"
+                                            class="w-7 h-7 text-white" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2 1C1.44772 1 1 1.44772 1 2V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V2C14 1.44772 13.5523 1 13 1H2ZM3.05 6H4.95V12H3.05V6ZM5.075 4.005C5.075 4.59871 4.59371 5.08 4 5.08C3.4063 5.08 2.925 4.59871 2.925 4.005C2.925 3.41129 3.4063 2.93 4 2.93C4.59371 2.93 5.075 3.41129 5.075 4.005ZM12 8.35713C12 6.55208 10.8334 5.85033 9.67449 5.85033C9.29502 5.83163 8.91721 5.91119 8.57874 6.08107C8.32172 6.21007 8.05265 6.50523 7.84516 7.01853H7.79179V6.00044H6V12.0047H7.90616V8.8112C7.8786 8.48413 7.98327 8.06142 8.19741 7.80987C8.41156 7.55832 8.71789 7.49825 8.95015 7.46774H9.02258C9.62874 7.46774 10.0786 7.84301 10.0786 8.78868V12.0047H11.9847L12 8.35713Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                    <h3
+                                        class="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                                        LinkedIn</h3>
+                                    <p class="text-sm text-gray-500 mb-3">Let's connect professionally</p>
+                                    <p
+                                        class="text-gray-400 group-hover:text-white transition-colors flex items-center gap-2">
+                                        Mohamed Ali Hamroun<svg stroke="currentColor" fill="currentColor"
+                                            stroke-width="0" viewBox="0 0 448 512"
+                                            class="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
+                                            </path>
+                                        </svg></p>
+                                </a></div>
+                        </div>
+                        <div class="text-center" style="opacity:0;transform:translateY(30px)">
+                            <div
+                                class="inline-flex flex-col sm:flex-row gap-4 p-2 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                                <a class="group relative px-8 py-4 rounded-xl font-semibold text-white overflow-hidden"
+                                    href="mailto:hamroun1969@gmail.com">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    </div><span class="relative flex items-center gap-2"><svg stroke="currentColor"
+                                            fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="w-4 h-4"
+                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                                            </path>
+                                        </svg>Send a Message</span>
+                                </a><a target="_blank" rel="noopener noreferrer"
+                                    class="px-8 py-4 rounded-xl font-semibold text-white  border border-white/20 hover:border-purple-500/50  hover:bg-purple-500/10 transition-all duration-300 flex items-center gap-2"
+                                    href="https://github.com/mohamedx2"><svg stroke="currentColor" fill="none"
+                                        stroke-width="0" viewBox="0 0 15 15" class="w-5 h-5" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+                                            fill="currentColor"></path>
+                                    </svg>View My Work</a></div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030014] to-transparent z-10">
+                    </div>
+                </section>
+            </div>
+        </main><!--$--><!--/$-->
+    </main>
+    <script>
+        // Make all hidden elements visible
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix all elements with opacity:0 in their inline styles
+            document.querySelectorAll('[style*="opacity:0"], [style*="opacity: 0"]').forEach(function(el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+            
+            // Fix scale transforms
+            document.querySelectorAll('[style*="scale(0"]').forEach(function(el) {
+                el.style.transform = 'none';
+            });
+            
+            // Simple smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
